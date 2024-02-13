@@ -12,6 +12,56 @@
 
   <!-- TODO #1 - Use a loop to display job results in a table. -->
 
+<!--  <table class="table table-striped">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>ID</th>-->
+<!--      <th>Name</th>-->
+<!--      <th>Employer</th>-->
+<!--      <th>Location</th>-->
+<!--      <th>Position Type</th>-->
+<!--      <th>Skill</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tr th:each="item : ${jobs}">-->
+<!--      <td th:text="${item.id}"></td>-->
+<!--      <td th:text="${item.name}"></td>-->
+<!--      <td th:text="${item.employer}"></td>-->
+<!--      <td th:text="${item.location}"></td>-->
+<!--      <td th:text="${item.positionType}"></td>-->
+<!--      <td th:text="${item.coreCompetency}"></td>-->
+<!--    </tr>-->
+<!--  </table>-->
+
+  <th:block th:each="item : ${jobs}">
+  <table class="job-listing">
+      <tr>
+      <td>ID</td>
+      <td  th:text="${item.id}"></td>
+      </tr>
+      <tr>
+      <td>Name</td>
+      <td th:text="${item.name}"></td>
+        </tr>
+      <tr>
+      <td>Employer</td>
+      <td th:text="${item.employer}"></td>
+        </tr>
+      <tr>
+      <td>Location</td>
+      <td th:text="${item.location}"></td>
+        </tr>
+      <tr>
+      <td>Postion Type</td>
+      <td th:text="${item.positionType}"></td>
+        </tr>
+      <tr>
+      <td>Skill</td>
+      <td th:text="${item.coreCompetency}"></td>
+        </tr>
+  </table>
+  </th:block>
+
 </div>
 
 </body>
